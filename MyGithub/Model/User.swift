@@ -9,18 +9,18 @@
 import Foundation
 
 struct UserInfo: Codable {
-    let location: Any?
-    let hireable: Any?
+    let location: String?
+    let hireable: String?
     let publicGists: Int
     let url: URL
     let followingUrl: String
     let eventsUrl: String
     let receivedEventsUrl: URL
-    let company: Any?
+    let company: String?
     let updatedAt: String
-    let bio: Any?
+    let bio: String?
     let avatarUrl: URL
-    let name: Any?
+    let name: String?
     let type: String
     let subscriptionsUrl: URL
     let gistsUrl: String
@@ -29,7 +29,7 @@ struct UserInfo: Codable {
     let organizationsUrl: URL
     let reposUrl: URL
     let siteAdmin: Bool
-    let email: Any?
+    let email: String?
     let login: String
     let blog: String
     let publicRepos: Int
@@ -71,12 +71,4 @@ struct UserInfo: Codable {
         case followersUrl = "followers_url"
         case htmlUrl = "html_url"
     }
-    
-//    init(from decoder: Decoder) throws {
-//
-//    }
-//
-//    func encode(to encoder: Encoder) throws {
-//
-//    }
 }
