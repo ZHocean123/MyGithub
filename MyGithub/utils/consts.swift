@@ -13,3 +13,4 @@ let clientId = "563c1feaccf901f7741f"
 let client_secret = "b560271b6af28686bdc92554296a4f88249a7871"
 
 let accessTokenKey = Key<String>("access_token")
+let userInfoKey = Key<UserInfo>("user_info_key")

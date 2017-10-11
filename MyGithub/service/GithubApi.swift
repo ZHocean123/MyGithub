@@ -27,6 +27,12 @@ let loggerPlugin = NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSO
 let GithubPrvider = RxMoyaProvider<Github>(plugins: [loggerPlugin])
 enum Github {
     case user
+    case repositories(
+        visibility: RepositoryVisibility?,
+        affiliation: RepositoryAffiliation?,
+        type: RepositoryType?,
+        sort: RepositorySortType?,
+        direction: RepositoryDirection?)
     case repository(owner: String, repo: String)
 }
 
@@ -36,7 +42,10 @@ extension Github: TargetType {
     }
 
     var headers: [String: String]? {
-        return nil
+        return [
+            "Content-Type": "application/json; charset=utf-8",
+            "Authorization": "token " + (accessToken ?? "")
+        ]
     }
 
     var method: Moya.Method {
@@ -50,6 +59,8 @@ extension Github: TargetType {
         switch self {
         case .user:
             return "user"
+        case .repositories:
+            return "user/repos"
         case .repository(let owner, let repo):
             return "repos/" + owner + "/" + repo
         }
@@ -61,9 +72,31 @@ extension Github: TargetType {
 
     var task: Task {
         switch self {
-        default:
-            return .requestParameters(parameters: ["access_token" : accessToken ?? ""],
+        case .repositories(let visibility,
+                           let affiliation,
+                           let type,
+                           let sort,
+                           let direction):
+            var parameters = [String: Any]()
+            if let visibility = visibility {
+                parameters["visibility"] = visibility.rawValue
+            }
+            if let affiliation = affiliation {
+                parameters["affiliation"] = affiliation.stringValue
+            }
+            if let type = type {
+                parameters["type"] = type.rawValue
+            }
+            if let sort = sort {
+                parameters["sort"] = sort.rawValue
+            }
+            if let direction = direction {
+                parameters["direction"] = direction.rawValue
+            }
+            return .requestParameters(parameters: parameters,
                                       encoding: URLEncoding.default)
+        default:
+            return .requestPlain
         }
     }
 }

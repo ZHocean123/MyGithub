@@ -13,6 +13,12 @@ import RxSwift
 extension Response {
     // 这一个主要是将JSON解析为单个的Model
     public func mapObject<T>(_ type: T.Type) throws -> T where T: Decodable {
+        guard self.statusCode == 200 else {
+            if let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: self.data) {
+                throw(ResponseError(errorResponse))
+            }
+            throw(ResponseError(String(self.statusCode)))
+        }
         do {
             let object = try JSONDecoder().decode(T.self, from: self.data)
             return object

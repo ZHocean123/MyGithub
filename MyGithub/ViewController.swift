@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import DefaultsKit
 
 class ViewController: UIViewController {
 
@@ -24,25 +25,28 @@ class ViewController: UIViewController {
 //        present(authViewController, animated: true) {
 //
 //        }
-
-        disposeBag = DisposeBag()
-        GithubPrvider.rx.request(.user)
-            .mapObject(UserInfo.self)
-            .subscribe { (event) in
-                switch event {
-                case .success(let userInfo):
-                    print(userInfo)
-                case .error(let error):
-                    print(error)
-                }
-            }.addDisposableTo(disposeBag)
+        if Defaults.shared.get(for: userInfoKey) != nil {
+            let repositoriesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RepositoriesViewController")
+            navigationController?.pushViewController(repositoriesViewController, animated: true)
+        } else {
+            disposeBag = DisposeBag()
+            GithubPrvider.rx.request(.user)
+                .mapObject(UserInfo.self)
+                .subscribe { (event) in
+                    switch event {
+                    case .success(let userInfo):
+                        print(userInfo)
+                        Defaults.shared.set(userInfo, for: userInfoKey)
+                    case .error(let error):
+                        print(error)
+                    }
+                }.addDisposableTo(disposeBag)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
