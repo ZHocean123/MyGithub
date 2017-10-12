@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3478EE1F8EF71B002F335D /* NodelayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */; };
 		2FAC80941F8DA63A007BB510 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */; };
 		2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80951F8DAC0B007BB510 /* Repository.swift */; };
 		2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */; };
@@ -51,6 +52,7 @@
 		188015D336DDD34A65D8CA46 /* Pods-MyGithubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGithubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGithubTests/Pods-MyGithubTests.release.xcconfig"; sourceTree = "<group>"; };
 		2905FD34CF8EA592D465FBD8 /* Pods_MyGithubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D06B493893C3EDBE9429026 /* Pods_MyGithubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodelayTableView.swift; sourceTree = "<group>"; };
 		2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		2FAC80951F8DAC0B007BB510 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				2FC62E5F1F8C521300BA2D0D /* LaunchScreen.storyboard */,
 				2FC62E621F8C521300BA2D0D /* Info.plist */,
 				2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */,
+				2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */,
 				2FFDE35A1F8E093700CD4AAC /* RepositoryCellButton.swift */,
 			);
 			path = MyGithub;
@@ -370,17 +373,21 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyGithub/Pods-MyGithub-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DefaultsKit/DefaultsKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicColor/DynamicColor.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyImage/SwiftyImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DefaultsKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -525,6 +532,7 @@
 			files = (
 				2FC62E871F8C537600BA2D0D /* GithubApi.swift in Sources */,
 				2FB4BAC21F8C9EB1003ACCB0 /* ApiParser.swift in Sources */,
+				2F3478EE1F8EF71B002F335D /* NodelayTableView.swift in Sources */,
 				2FC62E891F8C56E100BA2D0D /* consts.swift in Sources */,
 				2FC62E8D1F8C641600BA2D0D /* AuthViewController.swift in Sources */,
 				2FFDE3591F8DFDE300CD4AAC /* Error.swift in Sources */,

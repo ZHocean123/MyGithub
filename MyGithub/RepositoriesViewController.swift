@@ -13,7 +13,7 @@ import RxSwift
 class RepositoriesViewController: UIViewController {
 
     var disposeBag = DisposeBag()
-    var repositories = [Repository]()
+    var repositories = [RepositoryTableViewCellLayout]()
     let userInfo = Defaults.shared.get(for: userInfoKey)
 
     @IBOutlet weak var tableview: UITableView!
@@ -31,7 +31,9 @@ class RepositoriesViewController: UIViewController {
             .subscribe { [weak self] (event) in
                 switch event {
                 case .success(let repositories):
-                    self?.repositories = repositories
+                    self?.repositories = repositories.map({ (repository) -> RepositoryTableViewCellLayout in
+                        return RepositoryTableViewCellLayout(repository)
+                    })
                     self?.tableview.reloadData()
                 case .error(let error):
                     print(error.errorMessage)
@@ -64,12 +66,21 @@ extension RepositoriesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath) as! RepositoryTableViewCell
-        cell.nameLabel.text = repositories[indexPath.row].name
-        cell.descriptionLabel.text = repositories[indexPath.row].description
-        cell.languageButton.setTitle(repositories[indexPath.row].language, for: .normal)
-        cell.starsButton.setTitle(String(repositories[indexPath.row].stargazersCount), for: .normal)
-        cell.forksButton.setTitle(String(repositories[indexPath.row].forks), for: .normal)
+        cell.nameLabel.text = repositories[indexPath.row].repository.name
+        cell.descriptionLabel.text = repositories[indexPath.row].repository.description
+        cell.languageButton.setTitle(repositories[indexPath.row].repository.language, for: .normal)
+        cell.starsButton.setTitle(String(repositories[indexPath.row].repository.stargazersCount), for: .normal)
+        cell.forksButton.setTitle(String(repositories[indexPath.row].repository.forks), for: .normal)
         return cell
     }
 }
 
+extension RepositoriesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return repositories[indexPath.row].cellHeight
+    }
+}

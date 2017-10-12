@@ -8,6 +8,8 @@ target 'MyGithub' do
   # Pods for MyGithub
   pod 'Moya/RxSwift'
   pod 'DefaultsKit'
+  pod 'SwiftyImage'
+  pod 'DynamicColor'
 
   target 'MyGithubTests' do
     inherit! :search_paths
