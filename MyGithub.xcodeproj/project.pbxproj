@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F3478EE1F8EF71B002F335D /* NodelayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */; };
+		2FA1E5901F904BE100625152 /* RepositorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */; };
 		2FAC80941F8DA63A007BB510 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */; };
 		2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80951F8DAC0B007BB510 /* Repository.swift */; };
 		2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */; };
@@ -24,6 +25,8 @@
 		2FC62E871F8C537600BA2D0D /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC62E861F8C537600BA2D0D /* GithubApi.swift */; };
 		2FC62E891F8C56E100BA2D0D /* consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC62E881F8C56E100BA2D0D /* consts.swift */; };
 		2FC62E8D1F8C641600BA2D0D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC62E8C1F8C641600BA2D0D /* AuthViewController.swift */; };
+		2FCF06071F944A9B00E4BD98 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF06061F944A9B00E4BD98 /* RepositoryViewController.swift */; };
+		2FCF06091F944C7800E4BD98 /* AttributeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF06081F944C7800E4BD98 /* AttributeLabel.swift */; };
 		2FFDE3591F8DFDE300CD4AAC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDE3581F8DFDE300CD4AAC /* Error.swift */; };
 		2FFDE35B1F8E093700CD4AAC /* RepositoryCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDE35A1F8E093700CD4AAC /* RepositoryCellButton.swift */; };
 		5B35B7A6C35088D842C65E6D /* Pods_MyGithub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7498591FCC117FCD6699A5E6 /* Pods_MyGithub.framework */; };
@@ -53,6 +56,7 @@
 		2905FD34CF8EA592D465FBD8 /* Pods_MyGithubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D06B493893C3EDBE9429026 /* Pods_MyGithubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodelayTableView.swift; sourceTree = "<group>"; };
+		2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewController.swift; sourceTree = "<group>"; };
 		2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		2FAC80951F8DAC0B007BB510 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		2FC62E861F8C537600BA2D0D /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
 		2FC62E881F8C56E100BA2D0D /* consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consts.swift; sourceTree = "<group>"; };
 		2FC62E8C1F8C641600BA2D0D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2FCF06061F944A9B00E4BD98 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		2FCF06081F944C7800E4BD98 /* AttributeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeLabel.swift; sourceTree = "<group>"; };
 		2FFDE3581F8DFDE300CD4AAC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		2FFDE35A1F8E093700CD4AAC /* RepositoryCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellButton.swift; sourceTree = "<group>"; };
 		50015D901A8926A056010DD2 /* Pods-MyGithubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGithubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGithubUITests/Pods-MyGithubUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2FA1E58D1F904ADD00625152 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2FC62E581F8C521300BA2D0D /* ViewController.swift */,
+				2FC62E8C1F8C641600BA2D0D /* AuthViewController.swift */,
+				2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */,
+				2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */,
+				2FCF06061F944A9B00E4BD98 /* RepositoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2FA1E58E1F904B0700625152 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */,
+				2FFDE35A1F8E093700CD4AAC /* RepositoryCellButton.swift */,
+				2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */,
+				2FCF06081F944C7800E4BD98 /* AttributeLabel.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		2FB4BAC51F8CB4B3003ACCB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,17 +193,13 @@
 				2FB4BAC51F8CB4B3003ACCB0 /* Model */,
 				2FC62E851F8C535A00BA2D0D /* service */,
 				2FC62E841F8C534200BA2D0D /* utils */,
-				2FC62E8C1F8C641600BA2D0D /* AuthViewController.swift */,
+				2FA1E58E1F904B0700625152 /* views */,
+				2FA1E58D1F904ADD00625152 /* ViewControllers */,
 				2FC62E561F8C521300BA2D0D /* AppDelegate.swift */,
-				2FC62E581F8C521300BA2D0D /* ViewController.swift */,
 				2FC62E5A1F8C521300BA2D0D /* Main.storyboard */,
-				2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */,
 				2FC62E5D1F8C521300BA2D0D /* Assets.xcassets */,
 				2FC62E5F1F8C521300BA2D0D /* LaunchScreen.storyboard */,
 				2FC62E621F8C521300BA2D0D /* Info.plist */,
-				2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */,
-				2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */,
-				2FFDE35A1F8E093700CD4AAC /* RepositoryCellButton.swift */,
 			);
 			path = MyGithub;
 			sourceTree = "<group>";
@@ -377,6 +402,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyImage/SwiftyImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -387,6 +413,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,9 +565,12 @@
 				2FFDE3591F8DFDE300CD4AAC /* Error.swift in Sources */,
 				2FFDE35B1F8E093700CD4AAC /* RepositoryCellButton.swift in Sources */,
 				2FAC80941F8DA63A007BB510 /* RepositoriesViewController.swift in Sources */,
+				2FCF06071F944A9B00E4BD98 /* RepositoryViewController.swift in Sources */,
+				2FCF06091F944C7800E4BD98 /* AttributeLabel.swift in Sources */,
 				2FB4BAC71F8CB4BF003ACCB0 /* User.swift in Sources */,
 				2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */,
 				2FC62E591F8C521300BA2D0D /* ViewController.swift in Sources */,
+				2FA1E5901F904BE100625152 /* RepositorySearchViewController.swift in Sources */,
 				2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */,
 				2FB4BAC41F8CA43D003ACCB0 /* GithubAuth.swift in Sources */,
 				2FC62E571F8C521300BA2D0D /* AppDelegate.swift in Sources */,

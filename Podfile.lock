@@ -10,12 +10,14 @@ PODS:
     - RxSwift (~> 3.3)
   - Result (3.2.4)
   - RxSwift (3.6.1)
+  - SwiftyBeaver (1.4.2)
   - SwiftyImage (1.2.0)
 
 DEPENDENCIES:
   - DefaultsKit
   - DynamicColor
   - Moya/RxSwift
+  - SwiftyBeaver
   - SwiftyImage
 
 SPEC CHECKSUMS:
@@ -25,8 +27,9 @@ SPEC CHECKSUMS:
   Moya: cf5e6ee93af526532f92614004b8ad2ea60fd845
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  SwiftyBeaver: 91057725648ee4980308f1650af077d04b3654a0
   SwiftyImage: ebaa7c7b6163cd4ad102f3bb05a8fb276d35b4f3
 
-PODFILE CHECKSUM: 56f1737b275e9a8c7236d525567c7a59c7dc125f
+PODFILE CHECKSUM: 6d15af7f0f7091e4aab77ec0e34d00295972f12c
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0.beta.1

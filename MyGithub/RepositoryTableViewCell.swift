@@ -33,6 +33,7 @@ struct CellBackground {
 
 class RepositoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var descriptionView: AttributeLabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var languageButton: CellButton!
@@ -144,16 +145,16 @@ struct RepositoryTableViewCellLayout {
                 + 30 + 10
         }
     }
-
+    var layout: AttributeLayout
     var cellHeight: CGFloat = 44
 
     init(_ repository: Repository) {
         self.repository = repository
+        layout = AttributeLayout(NSAttributedString(string: repository.description ?? "", attributes: [.font: UIFont.systemFont(ofSize: 14)]), width: screenWidth - 10)
         cellHeight =
             getHeight(repository.name,
                       attributes: [.font: UIFont.systemFont(ofSize: 17)])
-            + getHeight(repository.description,
-                        attributes: [.font: UIFont.systemFont(ofSize: 14)])
+            + layout.height
             + 30 + 15 + 10
     }
 }

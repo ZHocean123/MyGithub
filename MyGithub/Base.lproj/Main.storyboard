@@ -74,6 +74,11 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JN-wf-fPY">
+                                <rect key="frame" x="80" y="226" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="搜索"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -112,12 +117,19 @@
                                                             <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHe-ES-ddu">
-                                                            <rect key="frame" x="13" y="31" width="349" height="17"/>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHe-ES-ddu">
+                                                            <rect key="frame" x="5" y="31" width="365" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEY-Jq-A5r" customClass="AttributeLabel" customModule="MyGithub" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="31" width="365" height="30"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" placeholder="YES" id="cTC-iT-BKO"/>
+                                                            </constraints>
+                                                        </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGQ-A7-GUs" customClass="CellStatusView" customModule="MyGithub" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="139" width="375" height="30"/>
                                                             <subviews>
@@ -166,18 +178,29 @@
                                                                 <constraint firstItem="q5Y-ra-J7v" firstAttribute="top" secondItem="SGQ-A7-GUs" secondAttribute="top" id="qRk-Pm-7WG"/>
                                                             </constraints>
                                                         </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEw-Ki-33e">
+                                                            <rect key="frame" x="324" y="8" width="43" height="30"/>
+                                                            <state key="normal" title="owner">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="SGQ-A7-GUs" secondAttribute="trailing" id="09f-FR-g58"/>
                                                         <constraint firstAttribute="trailing" secondItem="Vss-AP-XLI" secondAttribute="trailing" constant="13" id="2W0-io-Mkt"/>
-                                                        <constraint firstItem="CHe-ES-ddu" firstAttribute="leading" secondItem="rtp-rg-Vgh" secondAttribute="leading" constant="13" id="9TB-3o-JXy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qEY-Jq-A5r" secondAttribute="trailing" constant="5" id="6Pa-Xd-rDw"/>
+                                                        <constraint firstItem="CHe-ES-ddu" firstAttribute="leading" secondItem="rtp-rg-Vgh" secondAttribute="leading" constant="5" id="9TB-3o-JXy"/>
                                                         <constraint firstItem="CHe-ES-ddu" firstAttribute="top" secondItem="Vss-AP-XLI" secondAttribute="bottom" constant="5" id="CKV-1x-hqJ"/>
                                                         <constraint firstItem="SGQ-A7-GUs" firstAttribute="leading" secondItem="rtp-rg-Vgh" secondAttribute="leading" id="CxB-LQ-fmA"/>
+                                                        <constraint firstItem="HEw-Ki-33e" firstAttribute="top" secondItem="rtp-rg-Vgh" secondAttribute="top" constant="8" id="NAo-3n-19H"/>
                                                         <constraint firstAttribute="bottom" secondItem="SGQ-A7-GUs" secondAttribute="bottom" id="OXH-O1-1gz"/>
-                                                        <constraint firstAttribute="trailing" secondItem="CHe-ES-ddu" secondAttribute="trailing" constant="13" id="QEl-WA-dNj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CHe-ES-ddu" secondAttribute="trailing" constant="5" id="QEl-WA-dNj"/>
+                                                        <constraint firstItem="qEY-Jq-A5r" firstAttribute="top" secondItem="Vss-AP-XLI" secondAttribute="bottom" constant="5" id="Sat-tg-w45"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HEw-Ki-33e" secondAttribute="trailing" constant="8" id="Yht-wF-5NA"/>
                                                         <constraint firstItem="Vss-AP-XLI" firstAttribute="leading" secondItem="rtp-rg-Vgh" secondAttribute="leading" constant="13" id="jf3-xk-ewQ"/>
                                                         <constraint firstItem="Vss-AP-XLI" firstAttribute="top" secondItem="rtp-rg-Vgh" secondAttribute="top" constant="5" id="ny2-Gq-wYy"/>
+                                                        <constraint firstItem="qEY-Jq-A5r" firstAttribute="leading" secondItem="rtp-rg-Vgh" secondAttribute="leading" constant="5" id="qFO-Y9-KAp"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -192,6 +215,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="CHe-ES-ddu" id="g9r-Pi-H8W"/>
+                                            <outlet property="descriptionView" destination="qEY-Jq-A5r" id="NY6-mG-tZz"/>
                                             <outlet property="forksButton" destination="q5Y-ra-J7v" id="2ug-1V-5tj"/>
                                             <outlet property="languageButton" destination="mbN-Qv-yMg" id="8fD-6U-Thd"/>
                                             <outlet property="nameLabel" destination="Vss-AP-XLI" id="XaJ-j0-RD9"/>
