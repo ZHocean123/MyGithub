@@ -38,7 +38,7 @@ class RepositoriesViewController: UIViewController {
                 case .error(let error):
                     print(error.errorMessage)
                 }
-            }.addDisposableTo(disposeBag)
+            }.disposed(by: disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,11 +76,11 @@ extension RepositoriesViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cell = cell as? RepositoryTableViewCell {
-            cell.descriptionView.layout = repositories[indexPath.row].layout
-        }
-    }
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if let cell = cell as? RepositoryTableViewCell {
+//            cell.descriptionView.layout = repositories[indexPath.row].layout
+//        }
+//    }
 }
 
 extension RepositoriesViewController: UITableViewDelegate {

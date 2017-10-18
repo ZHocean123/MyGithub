@@ -11,7 +11,7 @@ import Foundation
 import Moya
 import RxSwift
 
-let GithubAuthPrvider = RxMoyaProvider<GithubAuth>(plugins: [loggerPlugin])
+let GithubAuthPrvider = MoyaProvider<GithubAuth>(plugins: [loggerPlugin])
 enum GithubAuth {
     case oAuth(client_id: String, client_secret: String, code: String)
 }

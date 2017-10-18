@@ -21,6 +21,22 @@ class AttributeLabel: UIView {
     var font = UIFont.systemFont(ofSize: 14)
     var color = UIColor(hex: 0x262626)
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+
+    override var frame: CGRect {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
+
+    override var bounds: CGRect {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
+
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
@@ -46,7 +62,7 @@ class AttributeLabel: UIView {
                 let lineOrigin = layout.lineRects[index].origin;
                 context.textPosition = lineOrigin
                 CTLineDraw(line, context)
-                
+
                 context.setLineWidth(1)
                 context.addRect(layout.lineRects[index])
                 context.setStrokeColor(UIColor.red.cgColor)
@@ -161,7 +177,7 @@ struct AttributeLayout {
                           width: rect.width,
                           height: rect.height)
         })
-        
+
         self.height = drawHeight - offset
         self.lines = lines
         self.frame = frame

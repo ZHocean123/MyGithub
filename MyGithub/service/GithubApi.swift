@@ -24,7 +24,7 @@ private func JSONResponseDataFormatter(_ data: Data) -> Data {
 }
 
 let loggerPlugin = NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)
-let GithubPrvider = RxMoyaProvider<Github>(plugins: [loggerPlugin])
+let GithubPrvider = MoyaProvider<Github>(plugins: [loggerPlugin])
 enum Github {
     case user
     case repositories(
@@ -34,6 +34,7 @@ enum Github {
         sort: RepositorySortType?,
         direction: RepositoryDirection?)
     case repository(owner: String, repo: String)
+    case searchRepositories(key: String)
 }
 
 extension Github: TargetType {
@@ -62,7 +63,9 @@ extension Github: TargetType {
         case .repositories:
             return "user/repos"
         case .repository(let owner, let repo):
-            return "repos/" + owner + "/" + repo
+            return "repos/\(owner)/\(repo)"
+        case .searchRepositories:
+            return "search/repositories"
         }
     }
 
@@ -94,6 +97,9 @@ extension Github: TargetType {
                 parameters["direction"] = direction.rawValue
             }
             return .requestParameters(parameters: parameters,
+                                      encoding: URLEncoding.default)
+        case .searchRepositories(let key):
+            return .requestParameters(parameters: ["q": key],
                                       encoding: URLEncoding.default)
         default:
             return .requestPlain

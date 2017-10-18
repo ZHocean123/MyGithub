@@ -94,6 +94,6 @@ extension AuthViewController {
             case .error(let error):
                 print(error)
             }
-        }.addDisposableTo(disposeBag)
+            }.disposed(by: disposeBag)
     }
 }

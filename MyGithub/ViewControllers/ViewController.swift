@@ -26,8 +26,8 @@ class ViewController: UIViewController {
 //
 //        }
         if Defaults.shared.get(for: userInfoKey) != nil {
-            let repositoriesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RepositoriesViewController")
-            navigationController?.pushViewController(repositoriesViewController, animated: true)
+//            let repositoriesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RepositoriesViewController")
+//            navigationController?.pushViewController(repositoriesViewController, animated: true)
         } else {
             disposeBag = DisposeBag()
             GithubPrvider.rx.request(.user)
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                     case .error(let error):
                         print(error)
                     }
-                }.addDisposableTo(disposeBag)
+                }.disposed(by: disposeBag)
         }
     }
 

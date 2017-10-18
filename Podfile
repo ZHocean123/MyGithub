@@ -6,7 +6,8 @@ target 'MyGithub' do
   use_frameworks!
 
   # Pods for MyGithub
-  pod 'Moya/RxSwift'
+  pod 'Moya/RxSwift','~>10.0.0-beta.1'
+#  pod 'RxSwift'
   pod 'DefaultsKit'
   pod 'SwiftyImage'
   pod 'DynamicColor'

@@ -2,21 +2,21 @@ PODS:
   - Alamofire (4.5.1)
   - DefaultsKit (0.0.7)
   - DynamicColor (3.3)
-  - Moya/Core (9.0.0):
+  - Moya/Core (10.0.0-beta.1):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/RxSwift (9.0.0):
+  - Moya/RxSwift (10.0.0-beta.1):
     - Moya/Core
-    - RxSwift (~> 3.3)
+    - RxSwift (= 4.0.0-rc.0)
   - Result (3.2.4)
-  - RxSwift (3.6.1)
+  - RxSwift (4.0.0-rc.0)
   - SwiftyBeaver (1.4.2)
   - SwiftyImage (1.2.0)
 
 DEPENDENCIES:
   - DefaultsKit
   - DynamicColor
-  - Moya/RxSwift
+  - Moya/RxSwift (~> 10.0.0-beta.1)
   - SwiftyBeaver
   - SwiftyImage
 
@@ -24,12 +24,12 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   DefaultsKit: fe857b5d5e5fa6dbe38f8139ff00cb83745706de
   DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
-  Moya: cf5e6ee93af526532f92614004b8ad2ea60fd845
+  Moya: 7fb3c51aa9b3fdf5ea7d9412e03b63edb9559fb3
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  RxSwift: 1dd09ceb11531c39adff4efe23556b1484e16967
   SwiftyBeaver: 91057725648ee4980308f1650af077d04b3654a0
   SwiftyImage: ebaa7c7b6163cd4ad102f3bb05a8fb276d35b4f3
 
-PODFILE CHECKSUM: 6d15af7f0f7091e4aab77ec0e34d00295972f12c
+PODFILE CHECKSUM: 3ce964ae253670410127588c7b7425eae5213bc7
 
 COCOAPODS: 1.4.0.beta.1
