@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.5.1)
   - DefaultsKit (0.0.7)
   - DynamicColor (3.3)
+  - MBProgressHUD (1.0.0)
   - Moya/Core (10.0.0-beta.1):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - DefaultsKit
   - DynamicColor
+  - MBProgressHUD
   - Moya/RxSwift (~> 10.0.0-beta.1)
   - SwiftyBeaver
   - SwiftyImage
@@ -24,12 +26,13 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   DefaultsKit: fe857b5d5e5fa6dbe38f8139ff00cb83745706de
   DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Moya: 7fb3c51aa9b3fdf5ea7d9412e03b63edb9559fb3
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxSwift: 1dd09ceb11531c39adff4efe23556b1484e16967
   SwiftyBeaver: 91057725648ee4980308f1650af077d04b3654a0
   SwiftyImage: ebaa7c7b6163cd4ad102f3bb05a8fb276d35b4f3
 
-PODFILE CHECKSUM: 3ce964ae253670410127588c7b7425eae5213bc7
+PODFILE CHECKSUM: 171983fdd094f60e20cdef0e6b823cc25b9fe030
 
 COCOAPODS: 1.4.0.beta.1

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2F3478EE1F8EF71B002F335D /* NodelayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */; };
+		2F95CC2F1F982D78008DA109 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95CC2E1F982D78008DA109 /* Pagination.swift */; };
+		2F95CC311F983094008DA109 /* SearchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95CC301F983094008DA109 /* SearchApi.swift */; };
+		2F95CC331F9835BF008DA109 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95CC321F9835BF008DA109 /* Plugin.swift */; };
+		2F95CC351F9837BF008DA109 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95CC341F9837BF008DA109 /* RepositoryCell.swift */; };
+		2F95CC371F9870B3008DA109 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95CC361F9870B3008DA109 /* HUD.swift */; };
 		2FA1E5901F904BE100625152 /* RepositorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */; };
 		2FAC80941F8DA63A007BB510 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */; };
 		2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80951F8DAC0B007BB510 /* Repository.swift */; };
@@ -56,6 +61,11 @@
 		2905FD34CF8EA592D465FBD8 /* Pods_MyGithubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D06B493893C3EDBE9429026 /* Pods_MyGithubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3478ED1F8EF71B002F335D /* NodelayTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodelayTableView.swift; sourceTree = "<group>"; };
+		2F95CC2E1F982D78008DA109 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		2F95CC301F983094008DA109 /* SearchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApi.swift; sourceTree = "<group>"; };
+		2F95CC321F9835BF008DA109 /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
+		2F95CC341F9837BF008DA109 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		2F95CC361F9870B3008DA109 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewController.swift; sourceTree = "<group>"; };
 		2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		2FAC80951F8DAC0B007BB510 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -151,6 +161,7 @@
 				2FFDE35A1F8E093700CD4AAC /* RepositoryCellButton.swift */,
 				2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */,
 				2FCF06081F944C7800E4BD98 /* AttributeLabel.swift */,
+				2F95CC341F9837BF008DA109 /* RepositoryCell.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 				2FB4BAC61F8CB4BF003ACCB0 /* User.swift */,
 				2FAC80951F8DAC0B007BB510 /* Repository.swift */,
 				2FFDE3581F8DFDE300CD4AAC /* Error.swift */,
+				2F95CC2E1F982D78008DA109 /* Pagination.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				2FC62E881F8C56E100BA2D0D /* consts.swift */,
+				2F95CC361F9870B3008DA109 /* HUD.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -236,6 +249,8 @@
 				2FC62E861F8C537600BA2D0D /* GithubApi.swift */,
 				2FB4BAC31F8CA43D003ACCB0 /* GithubAuth.swift */,
 				2FB4BAC11F8C9EB1003ACCB0 /* ApiParser.swift */,
+				2F95CC301F983094008DA109 /* SearchApi.swift */,
+				2F95CC321F9835BF008DA109 /* Plugin.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -399,6 +414,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DefaultsKit/DefaultsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicColor/DynamicColor.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -410,6 +426,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DefaultsKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -571,8 +588,13 @@
 				2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */,
 				2FC62E591F8C521300BA2D0D /* ViewController.swift in Sources */,
 				2FA1E5901F904BE100625152 /* RepositorySearchViewController.swift in Sources */,
+				2F95CC311F983094008DA109 /* SearchApi.swift in Sources */,
+				2F95CC351F9837BF008DA109 /* RepositoryCell.swift in Sources */,
 				2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */,
+				2F95CC371F9870B3008DA109 /* HUD.swift in Sources */,
+				2F95CC2F1F982D78008DA109 /* Pagination.swift in Sources */,
 				2FB4BAC41F8CA43D003ACCB0 /* GithubAuth.swift in Sources */,
+				2F95CC331F9835BF008DA109 /* Plugin.swift in Sources */,
 				2FC62E571F8C521300BA2D0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

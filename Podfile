@@ -12,6 +12,7 @@ target 'MyGithub' do
   pod 'SwiftyImage'
   pod 'DynamicColor'
   pod 'SwiftyBeaver'
+  pod 'MBProgressHUD'
 
   target 'MyGithubTests' do
     inherit! :search_paths

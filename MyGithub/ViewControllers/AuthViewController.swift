@@ -76,7 +76,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
 extension AuthViewController {
     func getAccessToken(_ code: String) {
         disposeBag = DisposeBag()
-        GithubAuthPrvider.rx.request(.oAuth(client_id: clientId, client_secret: client_secret, code: code)).mapString().subscribe { (event) in
+        GithubAuthPrvider.rx.request(.oAuth(client_id: clientId, client_secret: client_secret, code: code)).mapString().subscribe { [weak self] (event) in
             switch event {
             case .success(let str):
                 var params = [String: String]()
@@ -90,6 +90,9 @@ extension AuthViewController {
                 print(params)
                 if let accessToken = params["access_token"] {
                     Defaults.shared.set(accessToken, for: accessTokenKey)
+                    self?.dismiss(animated: true, completion: {
+                        
+                    })
                 }
             case .error(let error):
                 print(error)

@@ -111,16 +111,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NGS-O5-whX">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultCell" id="Her-lT-U1j">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Her-lT-U1j" id="L0D-0i-gYW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="ScD-jj-uh9" id="yG8-qq-sIR"/>
                                     <outlet property="delegate" destination="ScD-jj-uh9" id="0Jd-HC-Xf0"/>
@@ -155,7 +145,6 @@
                 <searchDisplayController id="gyd-Lc-xYa">
                     <connections>
                         <outlet property="delegate" destination="ScD-jj-uh9" id="9Se-e3-QVt"/>
-                        <outlet property="searchBar" destination="OaH-OM-n6a" id="3jn-8r-x40"/>
                         <outlet property="searchContentsController" destination="ScD-jj-uh9" id="iBz-zF-ZAb"/>
                         <outlet property="searchResultsDataSource" destination="ScD-jj-uh9" id="9rL-tL-IBm"/>
                         <outlet property="searchResultsDelegate" destination="ScD-jj-uh9" id="hAm-QE-Nby"/>
