@@ -17,6 +17,7 @@
 		2FAC80941F8DA63A007BB510 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */; };
 		2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80951F8DAC0B007BB510 /* Repository.swift */; };
 		2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */; };
+		2FACB9AB1F99F32D002C5A64 /* ButtonGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACB9AA1F99F32D002C5A64 /* ButtonGroupView.swift */; };
 		2FB4BAC21F8C9EB1003ACCB0 /* ApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4BAC11F8C9EB1003ACCB0 /* ApiParser.swift */; };
 		2FB4BAC41F8CA43D003ACCB0 /* GithubAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4BAC31F8CA43D003ACCB0 /* GithubAuth.swift */; };
 		2FB4BAC71F8CB4BF003ACCB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4BAC61F8CB4BF003ACCB0 /* User.swift */; };
@@ -70,6 +71,7 @@
 		2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		2FAC80951F8DAC0B007BB510 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		2FACB9AA1F99F32D002C5A64 /* ButtonGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupView.swift; sourceTree = "<group>"; };
 		2FB4BAC11F8C9EB1003ACCB0 /* ApiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParser.swift; sourceTree = "<group>"; };
 		2FB4BAC31F8CA43D003ACCB0 /* GithubAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuth.swift; sourceTree = "<group>"; };
 		2FB4BAC61F8CB4BF003ACCB0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */,
 				2FCF06081F944C7800E4BD98 /* AttributeLabel.swift */,
 				2F95CC341F9837BF008DA109 /* RepositoryCell.swift */,
+				2FACB9AA1F99F32D002C5A64 /* ButtonGroupView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				2FCF06071F944A9B00E4BD98 /* RepositoryViewController.swift in Sources */,
 				2FCF06091F944C7800E4BD98 /* AttributeLabel.swift in Sources */,
 				2FB4BAC71F8CB4BF003ACCB0 /* User.swift in Sources */,
+				2FACB9AB1F99F32D002C5A64 /* ButtonGroupView.swift in Sources */,
 				2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */,
 				2FC62E591F8C521300BA2D0D /* ViewController.swift in Sources */,
 				2FA1E5901F904BE100625152 /* RepositorySearchViewController.swift in Sources */,

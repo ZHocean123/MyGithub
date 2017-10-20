@@ -75,20 +75,22 @@ extension RepositoriesViewController: UITableViewDataSource {
         cell.forksButton.setTitle(String(repositories[indexPath.row].repository.forks), for: .normal)
         return cell
     }
-
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if let cell = cell as? RepositoryTableViewCell {
-//            cell.descriptionView.layout = repositories[indexPath.row].layout
-//        }
-//    }
 }
 
 extension RepositoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let controller = RepositoryViewController()
+        controller.repository = repositories[indexPath.row].repository
+        navigationController?.pushViewController(controller, animated: true)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return repositories[indexPath.row].cellHeight
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? RepositoryTableViewCell {
+            cell.descriptionView.layout = repositories[indexPath.row].layout
+        }
     }
 }
