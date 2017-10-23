@@ -82,6 +82,11 @@ extension Github: TargetType {
             if let direction = direction {
                 parameters["direction"] = direction.rawValue
             }
+            let pagination = Pagination(page: 1, perPage: 100)
+            pagination.param.forEach({ (key, value) in
+                parameters[key] = value
+            })
+
             return .requestParameters(parameters: parameters,
                                       encoding: URLEncoding.default)
         default:

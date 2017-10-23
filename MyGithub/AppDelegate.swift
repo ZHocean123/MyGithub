@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyBeaver
+import SideMenu
 
 let log = SwiftyBeaver.self
 
@@ -25,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let file = FileDestination() // log to default swiftybeaver.log file
         log.addDestination(console)
         log.addDestination(file)
+
+        // Define the menus
+        let menuViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SideMenuViewController")
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: menuViewController)
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
 
         return true
     }

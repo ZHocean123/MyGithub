@@ -15,6 +15,7 @@ class RepositoriesViewController: UIViewController {
     var disposeBag = DisposeBag()
     var repositories = [RepositoryTableViewCellLayout]()
     let userInfo = Defaults.shared.get(for: userInfoKey)
+    var type: RepositoryType? = nil
 
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
@@ -24,8 +25,8 @@ class RepositoriesViewController: UIViewController {
         disposeBag = DisposeBag()
         GithubPrvider.rx.request(.repositories(visibility: nil,
                                                affiliation: nil,
-                                               type: nil,
-                                               sort: .updated,
+                                               type: type,
+                                               sort: .fullName,
                                                direction: .asc))
             .mapObject([Repository].self)
             .subscribe { [weak self] (event) in

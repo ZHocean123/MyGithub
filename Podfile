@@ -6,13 +6,14 @@ target 'MyGithub' do
   use_frameworks!
 
   # Pods for MyGithub
-  pod 'Moya/RxSwift','~>10.0.0-beta.1'
-#  pod 'RxSwift'
+  pod 'Moya/RxSwift'
   pod 'DefaultsKit'
   pod 'SwiftyImage'
   pod 'DynamicColor'
   pod 'SwiftyBeaver'
   pod 'MBProgressHUD'
+  pod 'SideMenu'
+  pod 'UITableView+FDTemplateLayoutCell'
 
   target 'MyGithubTests' do
     inherit! :search_paths

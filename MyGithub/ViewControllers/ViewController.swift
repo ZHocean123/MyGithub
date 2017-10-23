@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import DefaultsKit
+import SideMenu
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Enable gestures. The left and/or right menus must be set up above for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
+        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
     }
 
     override func viewDidAppear(_ animated: Bool) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import UITableView_FDTemplateLayoutCell
 
 class RepositorySearchViewController: UIViewController {
 
@@ -20,7 +21,7 @@ class RepositorySearchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tableview.register(RepositoryCell.self, forCellReuseIdentifier: "searchResultCell")
+        tableview.register(UINib(nibName: "RepositoryCell", bundle: nil), forCellReuseIdentifier: "searchResultCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,8 +87,16 @@ extension RepositorySearchViewController: UITableViewDataSource {
 extension RepositorySearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return layouts[indexPath.row].height
+        /*
+        let item = repositories[indexPath.row]
+        return tableView.fd_heightForCell(withIdentifier: "searchResultCell", cacheBy: indexPath, configuration: { (cell) in
+            let cell = cell as! RepositoryCell
+            cell.repoNameLabel.text = item.name
+            cell.descriptionLabel.text = item.description
+        })
+         */
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = RepositoryViewController()
         controller.repository = repositories[indexPath.row]

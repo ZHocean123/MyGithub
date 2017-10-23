@@ -1,38 +1,44 @@
 PODS:
   - Alamofire (4.5.1)
-  - DefaultsKit (0.0.7)
+  - DefaultsKit (0.0.8)
   - DynamicColor (3.3)
   - MBProgressHUD (1.0.0)
-  - Moya/Core (10.0.0-beta.1):
+  - Moya/Core (10.0.0):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/RxSwift (10.0.0-beta.1):
+  - Moya/RxSwift (10.0.0):
     - Moya/Core
-    - RxSwift (= 4.0.0-rc.0)
+    - RxSwift (~> 4.0)
   - Result (3.2.4)
-  - RxSwift (4.0.0-rc.0)
+  - RxSwift (4.0.0)
+  - SideMenu (3.1.1)
   - SwiftyBeaver (1.4.2)
   - SwiftyImage (1.2.0)
+  - UITableView+FDTemplateLayoutCell (1.6)
 
 DEPENDENCIES:
   - DefaultsKit
   - DynamicColor
   - MBProgressHUD
-  - Moya/RxSwift (~> 10.0.0-beta.1)
+  - Moya/RxSwift
+  - SideMenu
   - SwiftyBeaver
   - SwiftyImage
+  - UITableView+FDTemplateLayoutCell
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  DefaultsKit: fe857b5d5e5fa6dbe38f8139ff00cb83745706de
+  DefaultsKit: d4e4271525388e33a17ee6842f2ded78f6892bc7
   DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  Moya: 7fb3c51aa9b3fdf5ea7d9412e03b63edb9559fb3
+  Moya: adb58b0f4e58430db43cc6e2f6ebab1836501186
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxSwift: 1dd09ceb11531c39adff4efe23556b1484e16967
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SideMenu: 1bf32e90afaa2dc0e0ab68e938a0ff85014c4217
   SwiftyBeaver: 91057725648ee4980308f1650af077d04b3654a0
   SwiftyImage: ebaa7c7b6163cd4ad102f3bb05a8fb276d35b4f3
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: 171983fdd094f60e20cdef0e6b823cc25b9fe030
+PODFILE CHECKSUM: 5f99583d9eaf05ffd2e9e975aaad3c8f742c10f4
 
 COCOAPODS: 1.4.0.beta.1
