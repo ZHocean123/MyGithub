@@ -14,6 +14,10 @@ import DefaultsKit
 class AuthViewController: UIViewController, WKNavigationDelegate {
 
     var disposeBag = DisposeBag()
+    var scopes: [GithubScope] = []
+    var state = ""
+
+    let keychain = KeychainSwift()
     @IBOutlet weak var webview: WKWebView!
 
     override func viewDidLoad() {
@@ -28,21 +32,46 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        webview.load(URLRequest(url: URL(string: "https://github.com/login/oauth/authorize?client_id=" + clientId)!))
+
+        // set random state string
+        state = "123123"
+
+        var components = URLComponents(string: "https://github.com/login/oauth/authorize")!
+        components.queryItems = [
+            URLQueryItem(name: "client_id", value: clientId),
+            URLQueryItem(name: "redirect_uri", value: "https://localhost/github_callbak"),
+            URLQueryItem(name: "scope", value: scopes.map({ "\($0.rawValue)" }).joined(separator: ",")),
+            URLQueryItem(name: "state", value: state),
+            URLQueryItem(name: "allow_signup", value: "true")
+        ]
+
+        webview.load(URLRequest(url: components.url!,
+                                cachePolicy: .reloadIgnoringLocalAndRemoteCacheData))
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        let url = navigationAction.request.url
-        print("action url:" + (url?.absoluteString)!)
-        if let urlStr = url?.absoluteString, urlStr.hasPrefix("https://localhost/?code=") {
-            let startSlicingIndex = urlStr.index(urlStr.startIndex, offsetBy: "https://localhost/?code=".characters.count)
-            let code = urlStr[startSlicingIndex...]
-            print("code:" + code)
-            getAccessToken(String(code))
+        guard let url = navigationAction.request.url else {
+            return
+        }
+        print("action url:" + (url.absoluteString))
+        if let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+            components.path == "/github_callbak" {
+            var code: String
+            for queryItem in components.queryItems ?? [] where queryItem.name == "code" {
+                if let value = queryItem.value {
+                    code = value
+                    print("code:" + code)
+                    getAccessToken(String(code))
+                } else {
+                    print("emptyCode")
+                }
+                break
+            }
             decisionHandler(.cancel)
         } else {
             decisionHandler(.allow)
@@ -89,14 +118,18 @@ extension AuthViewController {
                 }
                 print(params)
                 if let accessToken = params["access_token"] {
-                    Defaults.shared.set(accessToken, for: accessTokenKey)
-                    self?.dismiss(animated: true, completion: {
+                    if let strongSelf = self, !strongSelf.keychain.set(accessToken, forKey: "accessToken") {
                         
-                    })
+                    } else {
+                        self?.dismiss(animated: true, completion: {
+
+                        })
+                    }
+                    Defaults.shared.set(accessToken, for: accessTokenKey)
                 }
             case .error(let error):
                 print(error)
             }
-            }.disposed(by: disposeBag)
+        }.disposed(by: disposeBag)
     }
 }

@@ -45,3 +45,33 @@ class NodelayTableView: UITableView {
         return super.touchesShouldCancel(in: view)
     }
 }
+
+class NoDelayScrollView: UIScrollView {
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        commonInit()
+    }
+
+    func commonInit() {
+        self.delaysContentTouches = false
+        self.canCancelContentTouches = true
+    }
+
+    override func touchesShouldCancel(in view: UIView) -> Bool {
+        if view.isKind(of: UIControl.self) {
+            return true
+        }
+        return super.touchesShouldCancel(in: view)
+    }
+}

@@ -14,6 +14,7 @@ target 'MyGithub' do
   pod 'MBProgressHUD'
   pod 'SideMenu'
   pod 'UITableView+FDTemplateLayoutCell'
+  pod 'SnapKit'
 
   target 'MyGithubTests' do
     inherit! :search_paths

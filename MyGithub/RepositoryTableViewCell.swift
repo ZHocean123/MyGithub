@@ -14,7 +14,7 @@ import QuartzCore
 
 let SINGLE_LINE_WIDTH = (1 / UIScreen.main.scale)
 let SINGLE_LINE_ADJUST_OFFSET = ((1 / UIScreen.main.scale) / 2)
-let borderColor = DynamicColor(hex: 0xe0e0e0)
+let borderColor = DynamicColor(hex: 0xd1d5da)
 
 struct CellBackground {
     static let image: UIImage = {
@@ -122,8 +122,23 @@ class CellButton: UIButton {
         .color(DynamicColor(hex: 0xefeff4)).image
     static let backgroundImage = UIImage.size(CGSize(width: 1, height: 4))
         .color(.clear).image
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInt()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInt()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        commonInt()
+    }
+    
+    func commonInt() {
         self.setBackgroundImage(CellButton.backgroundImage, for: .normal)
         self.setBackgroundImage(CellButton.backgroundImage, for: .disabled)
         self.setBackgroundImage(CellButton.backgroundImageHighlight, for: .highlighted)

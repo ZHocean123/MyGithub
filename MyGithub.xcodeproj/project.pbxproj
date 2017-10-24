@@ -14,6 +14,8 @@
 		2F95CC351F9837BF008DA109 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95CC341F9837BF008DA109 /* RepositoryCell.swift */; };
 		2F95CC371F9870B3008DA109 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95CC361F9870B3008DA109 /* HUD.swift */; };
 		2FA1E5901F904BE100625152 /* RepositorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */; };
+		2FA884311F9ED2E600C62730 /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA884301F9ED2E500C62730 /* KeychainSwiftDistrib.swift */; };
+		2FA884331F9EDC2E00C62730 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA884321F9EDC2E00C62730 /* RepositoryDetailViewController.swift */; };
 		2FAC80941F8DA63A007BB510 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */; };
 		2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80951F8DAC0B007BB510 /* Repository.swift */; };
 		2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */; };
@@ -71,6 +73,8 @@
 		2F95CC341F9837BF008DA109 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		2F95CC361F9870B3008DA109 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewController.swift; sourceTree = "<group>"; };
+		2FA884301F9ED2E500C62730 /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
+		2FA884321F9EDC2E00C62730 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		2FAC80931F8DA63A007BB510 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		2FAC80951F8DAC0B007BB510 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2FAC80971F8DAE76007BB510 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				2FA1E58F1F904BE100625152 /* RepositorySearchViewController.swift */,
 				2FCF06061F944A9B00E4BD98 /* RepositoryViewController.swift */,
 				2FC8A20F1F9D7C680063E328 /* SideMenuViewController.swift */,
+				2FA884321F9EDC2E00C62730 /* RepositoryDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 		2FC62E841F8C534200BA2D0D /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				2FA884301F9ED2E500C62730 /* KeychainSwiftDistrib.swift */,
 				2FC62E881F8C56E100BA2D0D /* consts.swift */,
 				2F95CC361F9870B3008DA109 /* HUD.swift */,
 				2FC8A2131F9DB9860063E328 /* DateString.swift */,
@@ -432,6 +438,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyImage/SwiftyImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
@@ -446,6 +453,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
@@ -604,6 +612,7 @@
 				2FCF06091F944C7800E4BD98 /* AttributeLabel.swift in Sources */,
 				2FB4BAC71F8CB4BF003ACCB0 /* User.swift in Sources */,
 				2FACB9AB1F99F32D002C5A64 /* ButtonGroupView.swift in Sources */,
+				2FA884331F9EDC2E00C62730 /* RepositoryDetailViewController.swift in Sources */,
 				2FAC80981F8DAE76007BB510 /* RepositoryTableViewCell.swift in Sources */,
 				2FC62E591F8C521300BA2D0D /* ViewController.swift in Sources */,
 				2FA1E5901F904BE100625152 /* RepositorySearchViewController.swift in Sources */,
@@ -612,6 +621,7 @@
 				2F95CC351F9837BF008DA109 /* RepositoryCell.swift in Sources */,
 				2FAC80961F8DAC0B007BB510 /* Repository.swift in Sources */,
 				2F95CC371F9870B3008DA109 /* HUD.swift in Sources */,
+				2FA884311F9ED2E600C62730 /* KeychainSwiftDistrib.swift in Sources */,
 				2F95CC2F1F982D78008DA109 /* Pagination.swift in Sources */,
 				2FB4BAC41F8CA43D003ACCB0 /* GithubAuth.swift in Sources */,
 				2F95CC331F9835BF008DA109 /* Plugin.swift in Sources */,

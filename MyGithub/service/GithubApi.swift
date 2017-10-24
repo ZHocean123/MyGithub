@@ -11,8 +11,6 @@ import Moya
 import RxSwift
 import DefaultsKit
 
-var accessToken = Defaults.shared.get(for: accessTokenKey)
-
 let GithubPrvider = MoyaProvider<Github>(plugins: [loggerPlugin])
 enum Github {
     case user
@@ -33,7 +31,7 @@ extension Github: TargetType {
     var headers: [String: String]? {
         return [
             "Content-Type": "application/json; charset=utf-8",
-            "Authorization": "token " + (accessToken ?? "")
+            "Authorization": "token " + (KeychainSwift().get("accessToken") ?? "")
         ]
     }
 

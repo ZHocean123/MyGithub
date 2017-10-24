@@ -80,7 +80,7 @@ extension RepositoriesViewController: UITableViewDataSource {
 
 extension RepositoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = RepositoryViewController()
+        let controller = RepositoryDetailViewController()
         controller.repository = repositories[indexPath.row].repository
         navigationController?.pushViewController(controller, animated: true)
     }

@@ -40,7 +40,7 @@ extension Search: TargetType {
     var headers: [String: String]? {
         return [
             "Content-Type": "application/json; charset=utf-8",
-            "Authorization": "token " + (accessToken ?? "")
+            "Authorization": "token " + (KeychainSwift().get("accessToken") ?? "")
         ]
     }
 
